@@ -34,7 +34,7 @@ class SignupForm(authtoolsforms.UserCreationForm):
         super(SignupForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.fields["email"].widget.input_type = "email"  # ugly hack
-
+        
         self.helper.layout = Layout(
             Field('email', placeholder="Enter Email", autofocus=""),
             Field('name', placeholder="Enter Full Name"),

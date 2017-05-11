@@ -77,7 +77,7 @@ INSTALLED_APPS = (
 
     'profiles',
     'accounts',
-
+    'sales',
 )
 
 MIDDLEWARE_CLASSES = (
