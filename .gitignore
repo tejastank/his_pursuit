@@ -57,3 +57,6 @@ Desktop.ini
 
 # Project settings
 ./site/
+
+#node_modules
+./src/static/node_modules/
