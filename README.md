@@ -2,35 +2,35 @@
 
 # pursuit
 
-pursuit is a _short description_. It is built with [Python][0] using the [Django Web Framework][1].
+pursuit is a _short description_. It is built with [Python][3.5.2] using the [Django Web Framework][1.11].
 
 This project has the following basic apps:
 
-* App1 (short desc)
-* App2 (short desc)
-* App3 (short desc)
+* accounts
+* profiles
+* sales
+* pursuit  (the main app for settings)
 
 ## Installation
 
 ### Quick start
 
-To set up a development environment quickly, first install Python 3. It
-comes with virtualenv built-in. So create a virtual env by:
-
-    1. `$ python3 -m venv pursuit`
-    2. `$ . pursuit/bin/activate`
-
 Install all dependencies:
 
     pip install -r requirements.txt
+	
+Install Webpack:
+Go to /src/static folder
+
+    npm install webpack --save-dev
+    npm install --save react react-dom babel-core babel-loader babel-preset-react
 
 Run migrations:
 
     python manage.py migrate
+	
+Compile ReactJS
+Execute this under in src\static folder
 
-### Detailed instructions
+    node_modules\.bin\webpack --config webpack.config.js
 
-Take a look at the docs for more information.
-
-[0]: https://www.python.org/
-[1]: https://www.djangoproject.com/

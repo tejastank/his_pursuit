@@ -59,4 +59,4 @@ Desktop.ini
 ./site/
 
 #node_modules
-./src/static/node_modules/
+src/static/node_modules/

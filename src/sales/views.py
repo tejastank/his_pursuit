@@ -23,12 +23,4 @@ class CreateSalesOrderView(generic.CreateView):
     template_name = 'sales/create_sales_order.html'
     success_url = reverse_lazy('home')
     form_valid_message = "You're signed up!"
-
-#    def form_valid(self, form):
-#        r = super(CreateSalesOrderView, self).form_valid(form)
-#        username = form.cleaned_data["email"]
-#        password = form.cleaned_data["password1"]
-#        user = auth.authenticate(email=username, password=password)
-#        auth.login(self.request, user)
-#        return r
     
