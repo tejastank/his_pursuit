@@ -1,0 +1,2 @@
+class Prefix:
+    SO = 'PSSO'

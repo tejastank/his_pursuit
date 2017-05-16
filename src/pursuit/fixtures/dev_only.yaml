@@ -1,0 +1,25 @@
+- model: authtools.user
+  pk: 1
+  fields:
+    # Password 1234
+    password: pbkdf2_sha256$36000$FBMrTQGfu1E6$sJYFWEsEGE0qkyJ1Ni7TWrFX/2gsCVmLI1Mv3BjoSvc=
+    last_login: 2017-05-14 16:53:21.441277
+    is_superuser: 1
+    email: admin@abc.com
+    is_staff: 1
+    is_active: 1
+    date_joined: 2017-05-05 09:49:06.009936
+    name: Emma Watson
+- model: pursuit.Customer
+  pk: 1
+  fields:
+    name: Tom Hanks
+    phone: 95184873 # Phone number in HK has 8 digits
+    occupation: Movie Actor
+    dob: 1951-1-1
+    refer_by: Meryl Streep
+    email: tom.hanks@moviestudio.com
+    delivery_address: somewhere in US
+    at: 2017-05-14 04:25:41.713637
+    by_id: 1
+  

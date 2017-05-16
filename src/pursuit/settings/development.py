@@ -11,6 +11,18 @@ TEMPLATES[0]['OPTIONS'].update({'debug': True})
 if "celery" in sys.argv[0]:
     DEBUG = False
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'duser',
+        'PASSWORD': 'pass123',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'ATOMIC_REQUESTS': 'True'
+    }
+}
+
 # Django Debug Toolbar
 INSTALLED_APPS += (
     'debug_toolbar',)

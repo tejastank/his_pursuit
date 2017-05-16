@@ -74,7 +74,9 @@ INSTALLED_APPS = (
     'authtools',
     'crispy_forms',
     'easy_thumbnails',
+    'rest_framework',
 
+    'pursuit',
     'profiles',
     'accounts',
     'sales',
@@ -97,11 +99,11 @@ WSGI_APPLICATION = 'pursuit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
+#DATABASES = {
     # Raises ImproperlyConfigured exception if DATABASE_URL not in
     # os.environ
-    'default': env.db(),
-}
+#    'default': env.db(),
+#}
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
@@ -138,3 +140,13 @@ LOGIN_REDIRECT_URL = reverse_lazy("profiles:show_self")
 LOGIN_URL = reverse_lazy("accounts:login")
 
 THUMBNAIL_EXTENSION = 'png'     # Or any extn for your thumbnails
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
+# Set this to True to wrap each view in a transaction on this database
+# https://docs.djangoproject.com/en/1.11/topics/db/transactions/#tying-transactions-to-http-requests
+ATOMIC_REQUESTS=True
