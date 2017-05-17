@@ -80,7 +80,7 @@ class NewSalesOrderPanel extends React.Component {
                         <button className="btn btn-primary" onClick={(e) => this.saveOrder(e)}>Save Order</button>
                     </form>
                     
-                    <form id="add-row-form">
+                    <form id="add-row-form" className="section-box">
                         <div className="form-group">
                             <label for="ar-type">Add Item</label>
                             <select className="form-control" id="ar-type">

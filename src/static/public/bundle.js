@@ -9565,25 +9565,8 @@ class NewSalesOrderPanel extends React.Component {
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(data),
-            success: function () {
-                alert("Saved!");
-            }
+            success: function () {}
         });
-
-        /*       fetch('/sales/create-post/', {
-                   method: 'POST',
-                   headers: {
-                       'Accept': 'application/json',
-                       'Content-Type': 'application/json',
-                       'X-CSRFToken': cookies2
-                   },
-                   body: JSON.stringify(data)
-               })
-               .then(response => {
-                   console.log(response);
-                   console.log(response);
-               });
-        */
     }
 
     componentDidMount() {
@@ -9621,7 +9604,7 @@ class NewSalesOrderPanel extends React.Component {
                 ),
                 React.createElement(
                     'form',
-                    { id: 'add-row-form' },
+                    { id: 'add-row-form', className: 'section-box' },
                     React.createElement(
                         'div',
                         { className: 'form-group' },
