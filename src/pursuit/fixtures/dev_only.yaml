@@ -22,4 +22,22 @@
     delivery_address: somewhere in US
     at: 2017-05-14 04:25:41.713637
     by_id: 1
-  
+- model: pursuit.VendorType
+  pk: 1
+  fields:
+    name: Fabric
+    is_active: 1
+- model: pursuit.VendorType
+  pk: 2
+  fields:
+    name: Labor
+    is_active: 1
+- model: pursuit.Vendor
+  pk: 1
+  fields:
+    name: Vendor A
+    phone: 21548765
+    address: My Address
+    at: 2017-05-14 04:25:41.713637
+    by_id: 1
+    vendor_type_id: 1
