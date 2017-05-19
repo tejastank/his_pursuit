@@ -10,6 +10,31 @@
     is_active: 1
     date_joined: 2017-05-05 09:49:06.009936
     name: Emma Watson
+- model: authtools.user
+  pk: 2
+  fields:
+    # Password 1234
+    password: pbkdf2_sha256$36000$FBMrTQGfu1E6$sJYFWEsEGE0qkyJ1Ni7TWrFX/2gsCVmLI1Mv3BjoSvc=
+    last_login: 2017-05-14 16:53:21.441277
+    is_superuser: 0
+    email: sales_a@abc.com
+    is_staff: 1
+    is_active: 1
+    date_joined: 2017-05-05 09:49:06.009936
+    name: Sales A
+- model: authtools.user
+  pk: 3
+  fields:
+    # Password 1234
+    password: pbkdf2_sha256$36000$FBMrTQGfu1E6$sJYFWEsEGE0qkyJ1Ni7TWrFX/2gsCVmLI1Mv3BjoSvc=
+    last_login: 2017-05-14 16:53:21.441277
+    is_superuser: 0
+    email: staff_a@abc.com
+    is_staff: 1
+    is_active: 1
+    date_joined: 2017-05-05 09:49:06.009936
+    name: Staff A
+
 - model: pursuit.Customer
   pk: 1
   fields:
@@ -22,6 +47,7 @@
     delivery_address: somewhere in US
     at: 2017-05-14 04:25:41.713637
     by_id: 1
+
 - model: pursuit.VendorType
   pk: 1
   fields:
@@ -32,6 +58,7 @@
   fields:
     name: Labor
     is_active: 1
+
 - model: pursuit.Vendor
   pk: 1
   fields:
@@ -41,3 +68,32 @@
     at: 2017-05-14 04:25:41.713637
     by_id: 1
     vendor_type_id: 1
+
+- model: auth.Group
+  pk: 1
+  fields:
+    name: admin
+- model: auth.Group
+  pk: 2
+  fields:
+    name: sales
+- model: auth.Group
+  pk: 3
+  fields:
+    name: staff
+
+- model: authtools.user_groups
+  pk: 1
+  fields:
+    user_id: 1
+    group_id: 1
+- model: authtools.user_groups
+  pk: 2
+  fields:
+    user_id: 2
+    group_id: 2
+- model: authtools.user_groups
+  pk: 3
+  fields:
+    user_id: 3
+    group_id: 3
