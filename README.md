@@ -25,6 +25,13 @@ Eclipse with pydev or LiClipse
 
 ## Work Submit
 All your work should be submitted in a seperate branch.  Don't commit to master directly.  This is how we make sure only good codes will be merged to master.
+We will follow the partial merge approach.  I will merge everbody's code into the master branch in every 2 - 3 days.  Please make sure you merge back the changes to your branch, or, to make it simple, create a new branch afterwards.
+
+To create a seperate branch, run:
+
+```
+git checkbout -b [new-branch-name]
+```
 
 ## Installation
 
