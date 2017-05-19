@@ -24,8 +24,10 @@ https://django-edge.readthedocs.io/en/latest/
 Eclipse with pydev or LiClipse
 
 ## Work Submit
-All your work should be submitted in a seperate branch.  Don't commit to master directly.  This is how we make sure only good codes will be merged to master.
-We will follow the partial merge approach.  I will merge everbody's code into the master branch in every 2 - 3 days.  Please make sure you merge back the changes to your branch, or, to make it simple, create a new branch afterwards.
+All your work should be submitted in a seperate branch.  Don't commit to master directly.  
+This is how we make sure only good codes will be merged to master.
+I will merge everbody's code into the master branch in every 2 - 3 days.  
+Please make sure you merge back the changes to your branch after master is updated, or, to make it simple, create a new branch afterwards.
 
 To create a seperate branch, run:
 
@@ -87,5 +89,5 @@ http://mspangenberg.github.io/Bootstrap-3-Grids/devices.html
 ## Business Logic
 Business logic should be placed under a service class.  See sales.services.salesorder.py for example.
 
-## Default Logic
+## Default Login
 admin@abc.com / 1234
