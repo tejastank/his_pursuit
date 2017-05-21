@@ -97,3 +97,36 @@
   fields:
     user_id: 3
     group_id: 3
+
+- model: pursuit.IdDistributor
+  pk: 1
+  fields:
+    prefix: PSSO
+    last_id: 100
+    at: 2017-05-14 04:25:41.713637
+
+- model: pursuit.ItemQualityType
+  pk: 1
+  fields:
+    name: Regular
+    at: 2017-05-14 04:25:41.713637
+    by_id: 1
+- model: pursuit.ItemQualityType
+  pk: 2
+  fields:
+    name: Premium Wool
+    at: 2017-05-14 04:25:41.713637
+    by_id: 1
+
+- model: pursuit.ItemMaterial
+  pk: 1
+  fields:
+    external_code: ABC
+    internal_code: ABC
+    unit: yard
+    reference_cost: 50.3
+    description: Nice wool
+    color: white
+    at: 2017-05-14 04:25:41.713637
+    by_id: 1
+    quality_id: 2

@@ -1,7 +1,6 @@
 // main.js
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-var sales = require('./sales/SalesOrderList.js');
-var sales = require('./sales/SalesOrder.js');
-var sales = require('./sales/NewSalesOrder.js');
+require('./sales/SalesOrderList.js');
+require('./sales/SalesOrder.js');
+require('./sales/NewSalesOrder.js');

@@ -1,0 +1,17 @@
+{ 
+  "name": "Django",
+  "private": true,
+  "dependencies": {
+	"react": "15.5.x",
+	"react-dom": "15.5.x",
+	"react-datepicker": "0.46.x",
+	"babel-core": "6.24.x",
+	"babel-loader": "7.0.x",
+	"babel-preset-react": "6.24.x",
+	"superagent": "3.5.2",
+	"flux": "3.1.x"
+  },
+  "devDependencies": {
+    "webpack": "2.5.x"
+  }
+}

@@ -51,16 +51,18 @@ class NewSalesOrderPanel extends React.Component {
         var data = {
             cust_phone: $('#cust-phone').val(),
             details: this.state.details,
-            //csrfmiddlewaretoken: document.cookie.replace(/(?:(?:^|.*;\s*)csrftoken\s*\=\s*([^;]*).*$)|^.*$/, "$1")
         };
         
-        $.ajax('/sales/create-post/', {
-            type : 'POST',
-            contentType : 'application/json',
-            data : JSON.stringify(data),
-            success: function () {
-            }
-        });
+        var request = require('superagent');
+        
+        request
+            .post('/sales/create-post/')
+            .send(JSON.stringify(data))
+            .set('Content-Type', 'application/json')
+            .set('X-CSRFToken', getCookie('csrftoken'))
+            .end(function(err, res) {
+               // redirect to sales order portal or somewhere else
+            });
     }
     
     componentDidMount() {

@@ -47,8 +47,7 @@ pip install -r requirements.txt
 Go to /src/static folder
 
 ```
-npm install webpack --save-dev
-npm install --save react react-dom babel-core babel-loader babel-preset-react
+npm install
 ```
 
 ## Database Models and Migration
