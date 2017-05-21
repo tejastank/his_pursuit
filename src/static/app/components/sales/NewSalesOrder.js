@@ -1,9 +1,20 @@
+import PropTypes from 'prop-types';
+
 class NewSalesOrderPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             details: [],
+            arQuantity: '',
+            arPrice: '',
+            arType: 'Suit Jacket',
         };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({[event.target.name]: event.target.value});
     }
 
     fetchCustomers() {
@@ -31,9 +42,9 @@ class NewSalesOrderPanel extends React.Component {
                 
         var newrow = {
             no: this.getDetailRowCount(this.state.details),
-            details: $('#ar-type').val(), 
-            quantity: $('#ar-quantity').val(), 
-            price: $('#ar-price').val() 
+            details: this.state.arType,
+            quantity: this.state.arQuantity,
+            price: this.state.arPrice
         };
         
         this.setState({details: this.state.details.concat([newrow])});
@@ -85,20 +96,20 @@ class NewSalesOrderPanel extends React.Component {
                     <form id="add-row-form" className="section-box">
                         <div className="form-group">
                             <label for="ar-type">Add Item</label>
-                            <select className="form-control" id="ar-type">
+                            <select className="form-control" name="arType" onChange={this.handleChange}>
                                 <option>Suit Jacket</option>
                                 <option>Suit Jackets</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <label for="ar-quantity">Quantity:</label>
-                            <input className="form-control" id="ar-quantity" type="text" data-validation="required,number" />
+                            <input className="form-control" name="arQuantity" type="text" onChange={this.handleChange} data-validation="required,number" />
                         </div>
                         <div className="form-group">
                             <label for="ar-price">Price:</label>
                             <div className="input-group">
                                 <div className="input-group-addon">$</div>
-                                <input className="form-control" id="ar-price" type="text" data-validation="required,number" data-validation-allowing="float,negative" />
+                                <input className="form-control" name="arPrice" type="text" onChange={this.handleChange.bind(this, 'arPrice')} data-validation="required,number" data-validation-allowing="float,negative" />
                             </div>
                         </div>
                         <button className="btn btn-primary" onClick={(e) => this.addItem(e)}>Add Item</button>
@@ -111,6 +122,12 @@ class NewSalesOrderPanel extends React.Component {
         )
     }
 }
+
+NewSalesOrderPanel.propTypes = {
+    arType: PropTypes.string,
+    arQuantity: PropTypes.number,
+    arPrice: PropTypes.number
+};
 
 class SalesNewOrderDetailTable extends React.Component {
     constructor(props) {
