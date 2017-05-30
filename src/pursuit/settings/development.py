@@ -9,14 +9,14 @@ TEMPLATES[0]['OPTIONS'].update({'debug': True})
 # Turn off debug while imported by Celery with a workaround
 # See http://stackoverflow.com/a/4806384
 if "celery" in sys.argv[0]:
-    DEBUG = False
+    DEBUG = True
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
-        'USER': 'duser',
-        'PASSWORD': 'pass123',
+        'USER': 'root',
+        'PASSWORD': 'sb@mysql',
         'HOST': 'localhost',
         'PORT': '3306',
         'ATOMIC_REQUESTS': 'True'

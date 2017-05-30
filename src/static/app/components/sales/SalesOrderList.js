@@ -26,7 +26,7 @@ class SalesOrderTable extends React.Component {
                     <tr onClick={() => this.props.rowClicked(row)}>
                         <td><a href={"/sales/order/?id=" + row.id}>{row.id}</a></td>
                         <td>{row.remarks}</td>
-                        <td>{row.customer_name}</td>
+                        <td>{row.name}</td>
                     </tr>
                 )}
                 </tbody>
@@ -62,7 +62,7 @@ class SalesOrderEdit extends React.Component {
             <div>
                 Id: <input type="text" value={this.state.row.id} />
                 Remarks: <input type="text" value={this.state.row.remarks} />
-                Customer: <input type="text" value={this.state.row.customer_name} />
+                Customer: <input type="text" value={this.state.row.name} />
             </div>
         );
     }

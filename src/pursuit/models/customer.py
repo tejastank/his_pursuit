@@ -3,7 +3,7 @@ from profiles.models import Profile
 
 class Customer(models.Model):
 
-    name = models.CharField("Customer Name", max_length=100)
+    name = models.CharField("Name", max_length=100)
     phone = models.CharField('Phone Number', max_length=20, unique=True)
     occupation = models.CharField('Occupation', max_length=100, blank=True, null=True)
     dob = models.DateField('Date of Birth', blank=True, null=True)
@@ -18,3 +18,6 @@ class Customer(models.Model):
     class Meta:
         app_label = 'pursuit'
         db_table = 'customer'
+
+    def __unicode__(self):      
+        return self.name

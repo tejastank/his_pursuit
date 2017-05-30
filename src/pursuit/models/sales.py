@@ -17,6 +17,9 @@ class SalesOrderPayment(models.Model):
         app_label = 'pursuit'
         db_table = 'sales_order_payment'
 
+    def __unicode__(self):
+        return self.transaction_id
+
 class SalesOrder(models.Model):
     
     order_id = models.CharField("Order Id", max_length=20, default=None, unique=True)
@@ -35,6 +38,8 @@ class SalesOrder(models.Model):
         permissions = (
             ("view_salesorder", "Can view sales order"),
         )
+    def __unicode__(self):      
+        return self.order_id
         
 class SalesOrderDetail(models.Model):
     

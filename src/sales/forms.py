@@ -36,3 +36,19 @@ class CustomerForm(forms.ModelForm):
     
     #def save(self, force_insert=False, force_update=False, commit=True):
     #    super(Customer, self).save(commit=True)
+class CustomerView(forms.ModelForm):
+
+    def __init__(self,*args,**kwargs):      
+        super(CustomerView,self).__init__(*args, **kwargs)    
+
+        self.helper = FormHelper(self)
+        self.helper.form_class = 'form-horizontal'
+        self.helper.label_class = 'col-lg-2'
+        self.helper.field_class = 'col-lg-8'
+        self.helper.layout.append(Submit('save','save'))
+
+    class Meta :
+        model = Customer
+        exclude = ['by','at']
+
+    

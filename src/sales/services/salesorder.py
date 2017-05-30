@@ -34,4 +34,6 @@ class SalesOrderService:
         details = list(map(lambda d: SalesOrderService.create_sales_order_detail(d, main, user), json_obj['details']))
         
         for d in details:
-            d.save()
+            d.save()  
+
+              

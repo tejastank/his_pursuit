@@ -6,7 +6,7 @@ class NewSalesOrderPanel extends React.Component {
         this.state = {
             details: [],
             arQuantity: '',
-            arPrice: '',
+            Price: '',
             arType: 'Suit Jacket',
         };
 
@@ -44,7 +44,7 @@ class NewSalesOrderPanel extends React.Component {
             no: this.getDetailRowCount(this.state.details),
             details: this.state.arType,
             quantity: this.state.arQuantity,
-            price: this.state.arPrice
+            price: this.state.Price,
         };
         
         this.setState({details: this.state.details.concat([newrow])});
@@ -109,7 +109,8 @@ class NewSalesOrderPanel extends React.Component {
                             <label for="ar-price">Price:</label>
                             <div className="input-group">
                                 <div className="input-group-addon">$</div>
-                                <input className="form-control" name="arPrice" type="text" onChange={this.handleChange.bind(this, 'arPrice')} data-validation="required,number" data-validation-allowing="float,negative" />
+                                <input className="form-control" name="Price" type="text" onChange={this.handleChange} data-validation="required,number" data-validation-allowing="float,negative" />
+                                
                             </div>
                         </div>
                         <button className="btn btn-primary" onClick={(e) => this.addItem(e)}>Add Item</button>
@@ -126,7 +127,7 @@ class NewSalesOrderPanel extends React.Component {
 NewSalesOrderPanel.propTypes = {
     arType: PropTypes.string,
     arQuantity: PropTypes.number,
-    arPrice: PropTypes.number
+    Price: PropTypes.number
 };
 
 class SalesNewOrderDetailTable extends React.Component {

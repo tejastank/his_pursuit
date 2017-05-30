@@ -15,5 +15,7 @@ urlpatterns = [
     url(r'^rest/order/(?P<id>\d)/$', viewsets.SalesOrderViewSet.as_view({'get': 'list'}), name="Sales Order REST"),
     
     url(r'^customer/create/$', views.CustomerForm.as_view(), name="Create Customer"),
+    url(r'^customer/edit-post/$', viewsets.CustomerListEditViewSet, name="edit Customer"),
+    url(r'^customer/view/$', views.CustomerView.as_view(), name="View Customer"),
     url(r'^customer/list/$', viewsets.CustomerListViewSet.as_view({'get': 'list'}), name="Customer List REST"),
 ]
